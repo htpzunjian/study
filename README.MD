@@ -21,7 +21,7 @@ git status 查看当前仓库状态
 git add 提交文件到暂存区
 git add . 所有文件
 git add *.txt 所有的txt文件
-git ls-files 查看暂存区的文件
+git ls-files 查看版本区的文件
 
 git commit 只会把暂存区的文件提交到本地仓库
 git commit -m //
@@ -64,4 +64,12 @@ github ssh配置
 输入 ssh-keygen -t rsa -b 4096 回车
 然后命名。会生成两个文件。一个是命名的无后缀(私钥)，一个是命名的.hub文件(公钥)，打开公钥复制里面的内容，然后回到GitHub进行配置。
 
+同步本地仓库和远程仓库
+git pull 远程=》本地
+git push 本地=》远程
+
+git remote add origin关联本地与远程
+git remote -v查看当前仓库对应远程仓库的别名和地址
+
+git push -u origin main:main 将本地仓库与远程仓库的main分支相关联
 ```
