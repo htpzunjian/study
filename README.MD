@@ -72,4 +72,23 @@ git remote add origin关联本地与远程
 git remote -v查看当前仓库对应远程仓库的别名和地址
 
 git push -u origin main:main 将本地仓库与远程仓库的main分支相关联
+
+
+git branch 分支名 创建新的分支（但并没有切换）
+git checkout 分支名 切换分支
+
+git checkout不仅可以切换分支，还可以恢复文件。所以如果分支名与文件名相同，会默认切换分支。为了避免歧义还可以用git switch切换分支
+
+git merge 分支名可以将分支合并到当前分支中,合并后分支不会消失。不使用了可以git branch -d 分支名
+删除，如果没有合并的话需要git branch -D 分支名才能强制删除
+
+git rebase main 将当前分支dev变基到main分支，顺序在main分支之后。因为rebase会找到
+两个分支的共同祖先，然后将dev分支嫁接到main分支后
+
+```
+merage:bao
+分支冲突：
+```
+
+
 ```
